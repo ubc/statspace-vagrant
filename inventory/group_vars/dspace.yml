@@ -1,0 +1,17 @@
+dspace_version: statspace
+
+dspace_user: vagrant
+dspace_group: vagrant
+
+dspace_admins:
+  - name: Admin
+    surname: DSpace
+    email: admin@example.com
+    password: admin
+    locale: en
+
+dspace_use_proxy: yes
+dspace_mail_server: mailhost.stat.ubc.ca
+
+dspace_site_registries:
+  - statspace.xml

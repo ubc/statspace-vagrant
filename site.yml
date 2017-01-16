@@ -1,0 +1,6 @@
+---
+# file: site.yml
+- hosts: all
+  become: true
+  roles:
+    - dspace

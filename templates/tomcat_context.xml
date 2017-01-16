@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<Context
+    docBase = "{{ dspace_install_dir }}/webapps/{{ item }}"
+    reloadable = "true"
+    cachingAllowed = "false">
+{% if dspace_use_proxy %}
+  <Valve className="org.apache.catalina.valves.RemoteIpValve"
+         protocolHeader="X-Forwarded-Proto"
+         internalProxies="127\.\d{1,3}\.\d{1,3}\.\d{1,3}"/>
+{% if item == "solr" %}
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1"/>
+{% endif %}
+{% endif %}
+</Context>
