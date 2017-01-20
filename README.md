@@ -3,7 +3,7 @@
 ## Clone DSpace Repo
 
 ```
-git clone https://github.com/cubranic/DSpace.git
+git clone https://github.com/ubc/DSpace.git
 ```
 
 ## Build VM
